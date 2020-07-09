@@ -3,23 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>TODO</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
-    <h1><%= kindofday %></h1>
-    <ul>
-      <li>
-        I want to buy milk
-      </li>
-      <li>
-        Feel Free
-      </li>
-      <li>
-        Drive in the rain!
-      </li>
-    </ul>
-    <form class="" action="/" method="post">
-      <input type="text" name="" value="New Task">
-      <button type="Submit" name="button">Create</button>
+    <div class="box", id="heading">
+      <h1><%= kindofday %></h1>
+    </div>
+    <div class="box">
+      <% for (var i=0;i<newitem.length;i++){%>
+      <div class="item">
+        <input type="checkbox" />
+        <p>
+          <%= newitem[i]%>
+        </p>
+        </div>
+      <%  }%>
+
+
+
+
+    <form class="item" action="/" method="post">
+      <input type="text" name="itemName" placeholder="New Task" autocomplete="off">
+      <button type="Submit" name="button">+</button>
     </form>
+    </div>
   </body>
 </html>
