@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="box", id="heading">
-      <h1><%= kindofday %></h1>
+      <h1><%= listTitle %></h1>
     </div>
     <div class="box">
       <% for (var i=0;i<newitem.length;i++){%>
@@ -18,13 +18,9 @@
         </p>
         </div>
       <%  }%>
-
-
-
-
     <form class="item" action="/" method="post">
       <input type="text" name="itemName" placeholder="New Task" autocomplete="off">
-      <button type="Submit" name="button">+</button>
+      <button type="Submit" value=<%=listTitle%> name="button">+</button>
     </form>
     </div>
   </body>
